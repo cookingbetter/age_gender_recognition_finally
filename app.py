@@ -46,7 +46,7 @@ padding = 20
 
 def age_gender_detector(frame):
     # Read frame
-    frame = np.array(image[:, :, ::-1])
+    frame = np.array(image)
     frameFace, bboxes = getFaceBox(faceNet, frame)
     for bbox in bboxes:
         # print(bbox)
@@ -65,7 +65,7 @@ def age_gender_detector(frame):
     return frameFace
 
 def main():
-    st.title("Face Detection App")
+    st.title("Age and gender recognition app")
 
     image_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
 
