@@ -61,7 +61,7 @@ def age_gender_detector(frame):
         age = ageList[agePreds[0].argmax()]
 
         label = "{},{}".format(gender, age)
-        cv2.putText(frameFace, label, (bbox[0], bbox[1]-10), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 255), 1, cv2.LINE_AA)
+        cv2.putText(frameFace, label, (bbox[0], bbox[1]-10), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 255), 1, cv2.LINE_AA)
     return frameFace
 
 def main():
