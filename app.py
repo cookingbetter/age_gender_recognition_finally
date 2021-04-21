@@ -46,6 +46,7 @@ padding = 20
 
 def age_gender_detector(frame):
     # Read frame
+    frame = np.array(image[:, :, ::-1])
     frameFace, bboxes = getFaceBox(faceNet, frame)
     for bbox in bboxes:
         # print(bbox)
@@ -72,9 +73,9 @@ def main():
 
     if image_file is not None:
 
-        image = cv2.imread(image_file)
+        image = Image.open(image_file)
 
-        result_img = age_gender_detector(image_file)
+        result_img = age_gender_detector(image)
         st.image(result_img, use_column_width = True)
         st.success('Found something I hope')
 
