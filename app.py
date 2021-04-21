@@ -65,8 +65,7 @@ def age_gender_detector(frame):
     return frameFace
 
 def main():
-    st.title("Face Detection App :sunglasses: ")
-    st.write("**Using the Haar cascade Classifiers**")
+    st.title("Face Detection App")
 
     image_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
 
