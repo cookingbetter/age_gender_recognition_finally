@@ -24,14 +24,14 @@ def getFaceBox(net, frame, conf_threshold=0.7):
             cv2.rectangle(frameOpencvDnn, (x1, y1), (x2, y2), (255, 255, 0), int(round(frameHeight/150)), 1)
     return frameOpencvDnn, bboxes
 
-faceProto = "modelNweight/opencv_face_detector.pbtxt"
-faceModel = "modelNweight/opencv_face_detector_uint8.pb"
+faceProto = "weights/opencv_face_detector.pbtxt"
+faceModel = "weights/opencv_face_detector_uint8.pb"
 
-ageProto = "modelNweight/age_deploy.prototxt"
-ageModel = "modelNweight/age_net.caffemodel"
+ageProto = "weights/age_deploy.prototxt"
+ageModel = "weights/age_net.caffemodel"
 
-genderProto = "modelNweight/gender_deploy.prototxt"
-genderModel = "modelNweight/gender_net.caffemodel"
+genderProto = "weights/gender_deploy.prototxt"
+genderModel = "weights/gender_net.caffemodel"
 
 MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
 ageList = ['(0-2)', '(4-6)', '(8-12)', '(15-20)', '(25-32)', '(38-43)', '(48-53)', '(60-100)']
