@@ -46,7 +46,7 @@ padding = 20
 
 def age_gender_detector(frame):
     # Read frame
-    frame = np.array(image)
+    frame = np.array(frame)
     frameFace, bboxes = getFaceBox(faceNet, frame)
     for bbox in bboxes:
         # print(bbox)
