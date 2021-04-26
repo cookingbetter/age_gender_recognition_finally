@@ -70,7 +70,7 @@ def age_gender_detector(frame):
 
         label = "{},{}".format(gender, age)
         #setting age and gender near detected image
-        cv2.putText(frameFace, label, (bbox[0], bbox[1]-10), cv2.FONT_HERSHEY_SIMPLEX, 2.5, (0, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(frameFace, label, (bbox[0], bbox[1]-10), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), 2, cv2.LINE_AA)
     return frameFace
 
 def main():
